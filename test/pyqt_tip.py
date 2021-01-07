@@ -4,8 +4,8 @@
 @description: 弹出框参考
 '''
 
-from PyQt5.QtWidgets import *
 from PyQt5.QtCore import Qt, pyqtSignal, QTimer
+from PyQt5.QtWidgets import *
 
 
 class MyWindow(QWidget):
@@ -101,6 +101,7 @@ class MyWindow(QWidget):
     def do_btn11(self, event):  # 输入：整数
         # 后面四个数字的作用依次是 初始值 最小值 最大值 步幅
         value, ok = QInputDialog.getInt(self, "输入框标题", "这是提示信息\n\n请输入整数:", 37, -10000, 10000, 2)
+
         # self.echo(value)
 
     def do_btn12(self, event):  # 输入：小数
@@ -261,5 +262,7 @@ if __name__ == "__main__":
 
     app = QApplication(sys.argv)
     win = MyWindow()
-    win.show()
+    # win.show()
     sys.exit(app.exec_())
+
+    print("hello world!")
